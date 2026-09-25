@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio de Biología | Ingeniería Agrónoma | UNTRM</title>
+<style>
+:root{
+ --blue:#0756a6;--blue2:#0b73d1;--light:#eef6ff;--ink:#172b3a;
+ --muted:#657785;--white:#fff;--line:#dce8f2;--shadow:0 12px 32px rgba(20,65,105,.10)
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f9fc;color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.sidebar{
+ position:fixed;left:0;top:0;width:245px;height:100vh;background:linear-gradient(180deg,#064b91,#0874ce);
+ color:white;padding:25px 17px;z-index:50;box-shadow:5px 0 22px rgba(0,0,0,.12)
+}
+.logo{text-align:center;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.2)}
+.seal{width:64px;height:64px;border:2px solid white;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;font-size:12px;font-weight:900}
+.logo strong{display:block;font-size:14px}
+.logo small{display:block;margin-top:4px;opacity:.8;font-size:11px}
+.menu{margin-top:25px;display:grid;gap:7px}
+.menu a{padding:12px 13px;border-radius:10px;font-weight:700;font-size:14px}
+.menu a:hover{background:rgba(255,255,255,.16)}
+.prof{margin-top:25px;padding:15px;border-radius:13px;background:rgba(255,255,255,.10);font-size:12px}
+.prof b{display:block;font-size:13px;margin-bottom:5px}
+.main{margin-left:245px}
+.hero{min-height:620px;padding:80px 7%;display:flex;align-items:center;background:
+ radial-gradient(circle at 85% 20%,rgba(11,115,209,.16),transparent 28%),
+ linear-gradient(135deg,#eaf4ff,#f7fbff)}
+.hero-in{max-width:1000px}
+.badge{display:inline-block;background:#dceeff;color:var(--blue);padding:8px 13px;border-radius:999px;font-weight:800;font-size:13px}
+h1{font-size:clamp(42px,6vw,78px);line-height:1.0;letter-spacing:-3px;margin:20px 0 16px;color:#10334e}
+.hero p{max-width:720px;font-size:18px;color:#536b7b}
+.btn{display:inline-block;margin-top:25px;background:var(--blue);color:white;padding:13px 18px;border-radius:11px;font-weight:800}
+.btn:hover{background:var(--blue2)}
+.container{max-width:1100px;margin:auto;padding:70px 6%}
+.heading span{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:900;color:var(--blue2)}
+.heading h2{font-size:34px;margin:5px 0 8px}
+.heading p{color:var(--muted);max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+.card{background:white;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:var(--shadow)}
+.card h3{color:var(--blue);margin:8px 0}
+.icon{font-size:29px}
+.unit{margin-top:15px;background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:var(--shadow)}
+.unit button{width:100%;border:0;background:white;padding:20px 22px;text-align:left;color:var(--blue);font-size:16px;font-weight:900;cursor:pointer}
+.unit button:hover{background:#f5faff}
+.plus{float:right;font-size:22px}
+.panel{display:none;padding:0 22px 20px}
+.panel.open{display:block}
+.item{padding:15px 0;border-top:1px solid var(--line)}
+.tag{display:inline-block;background:#e5f2ff;color:var(--blue);padding:4px 8px;border-radius:7px;font-size:10px;font-weight:900;margin-bottom:6px}
+.evidence{min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
+.open{color:var(--blue);font-weight:900;margin-top:18px}
+.reflection{background:linear-gradient(135deg,#0756a6,#0a76d4);color:white;border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+.reflection p{color:#e4f1ff}
+textarea{width:100%;min-height:170px;margin-top:15px;border:0;border-radius:13px;padding:15px;font:inherit}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:25px}
+.step{background:white;border:1px solid var(--line);border-radius:16px;padding:20px}
+.num{font-size:11px;color:var(--blue2);font-weight:900}
+.step h3{margin:6px 0;color:var(--blue)}
+footer{background:#102f4d;color:#dbeaf7;padding:35px 6%;margin-top:20px}
+footer a{text-decoration:underline;color:white}
+@media(max-width:850px){
+ .sidebar{position:static;width:100%;height:auto;padding:15px}
+ .logo{text-align:left;display:flex;align-items:center;gap:10px;padding-bottom:12px}
+ .seal{margin:0;width:48px;height:48px;flex:none}
+ .menu{display:flex;overflow:auto;margin-top:12px}
+ .menu a{white-space:nowrap}
+ .prof{display:none}.main{margin-left:0}.hero{min-height:520px}
+ .timeline{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){.timeline{grid-template-columns:1fr}.container{padding:55px 20px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+ <div class="logo">
+  <div class="seal">UNTRM</div>
+  <div><strong>PORTAFOLIO VIRTUAL</strong><small>Ingeniería Agrónoma</small></div>
+ </div>
+ <nav class="menu">
+  <a href="#inicio">🏠 Inicio</a>
+  <a href="#presentacion">👤 Presentación</a>
+  <a href="#unidades">📚 Unidades</a>
+  <a href="#evidencias">📂 Evidencias</a>
+  <a href="#aportes">📖 Aportes</a>
+  <a href="#reflexion">🧠 Reflexión</a>
+  <a href="#proceso">🗺️ Mi proceso</a>
+ </nav>
+ <div class="prof">
+  <b>🎓 Curso</b>
+  Biología
+  <br><br>
+  <b>🏛️ Universidad</b>
+  Universidad Nacional Toribio Rodríguez de Mendoza de Amazonas
+ </div>
+</aside>
+
+<div class="main">
+<section class="hero" id="inicio">
+ <div class="hero-in">
+  <span class="badge">🎓 Portafolio académico interactivo</span>
+  <h1>Mi portafolio de Biología</h1>
+  <p>Ingeniería Agrónoma · Universidad Nacional Toribio Rodríguez de Mendoza de Amazonas. Aquí presento mis aprendizajes, evidencias, aportes y reflexión crítica.</p>
+  <a class="btn" href="#unidades">Comenzar recorrido ↓</a>
+ </div>
+</section>
+
+<section class="container" id="presentacion">
+ <div class="heading"><span>01 · Presentación</span><h2>Datos del estudiante</h2><p>Completa tus datos antes de enviar el portafolio al profesor.</p></div>
+ <div class="cards">
+  <div class="card"><div class="icon">👤</div><h3>Estudiante</h3><p><strong>Wilmer Smith Arrieta Guerrero</strong></p></div>
+  <div class="card"><div class="icon">🌱</div><h3>Carrera</h3><p>Ingeniería Agrónoma</p></div>
+  <div class="card"><div class="icon">🔬</div><h3>Curso</h3><p>Biología</p></div>
+  <div class="card"><div class="icon">👨‍🏫</div><h3>Docente</h3><p>Nombre de tu profesor</p></div>
+ </div>
+</section>
+
+<section class="container" id="unidades">
+ <div class="heading"><span>02 · Aprendizaje</span><h2>Unidades del curso</h2><p>Haz clic en cada punto para que se despliegue la información.</p></div>
+
+ <div class="unit">
+  <button onclick="toggle('u1',this)">I Unidad · Aprendizajes y evidencias <span class="plus">+</span></button>
+  <div class="panel" id="u1">
+   <div class="item"><span class="tag">APRENDIZAJES</span><p>Escribe todo lo que has aprendido con tu profesor durante la primera unidad.</p></div>
+   <div class="item"><span class="tag">EVIDENCIAS</span><p>Agrega informes, trabajos, prácticas, fotografías o enlaces.</p></div>
+   <div class="item"><span class="tag">APORTES</span><p>Explica qué artículos revisaste, qué aprendiste de ellos y por qué fueron importantes.</p></div>
+  </div>
+ </div>
+
+ <div class="unit">
+  <button onclick="toggle('u2',this)">II Unidad · Aprendizajes y reflexión <span class="plus">+</span></button>
+  <div class="panel" id="u2">
+   <div class="item"><span class="tag">APRENDIZAJES</span><p>Describe los conocimientos y habilidades desarrollados.</p></div>
+   <div class="item"><span class="tag">EVIDENCIAS</span><p>Incluye los trabajos que demuestran tu aprendizaje.</p></div>
+   <div class="item"><span class="tag">REFLEXIÓN CRÍTICA</span><p>Explica qué aprendiste, para qué te sirvió y cómo lo puedes aplicar.</p></div>
+  </div>
+ </div>
+
+ <div class="unit">
+  <button onclick="toggle('u3',this)">III Unidad · Espacio para completar <span class="plus">+</span></button>
+  <div class="panel" id="u3">
+   <div class="item"><span class="tag">APRENDIZAJES</span><p>Agrega aquí los aprendizajes de la tercera unidad.</p></div>
+   <div class="item"><span class="tag">EVIDENCIAS</span><p>Agrega informes, trabajos, fotografías o enlaces.</p></div>
+   <div class="item"><span class="tag">REFLEXIÓN</span><p>Escribe qué aprendiste y cómo se relaciona con Ingeniería Agrónoma.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="container" id="evidencias">
+ <div class="heading"><span>03 · Evidencias</span><h2>Mis trabajos de Biología</h2><p>Coloca aquí los enlaces a tus informes, prácticas, fotos, videos o documentos.</p></div>
+ <div class="cards">
+  <div class="card evidence"><div><span class="tag">INFORME</span><h3>Trabajo 01</h3><p>Descripción del informe.</p></div><a class="open" href="#">Abrir evidencia →</a></div>
+  <div class="card evidence"><div><span class="tag">PRÁCTICA</span><h3>Trabajo 02</h3><p>Descripción de la práctica.</p></div><a class="open" href="#">Abrir evidencia →</a></div>
+  <div class="card evidence"><div><span class="tag">PROYECTO</span><h3>Trabajo 03</h3><p>Descripción del proyecto.</p></div><a class="open" href="#">Abrir evidencia →</a></div>
+ </div>
+</section>
+
+<section class="container" id="aportes">
+ <div class="heading"><span>04 · Aportes</span><h2>Artículos revisados</h2><p>Explica qué aporta cada artículo y por qué es importante para tu aprendizaje.</p></div>
+ <div class="cards">
+  <div class="card"><span class="tag">ARTÍCULO 01</span><h3>Título del artículo</h3><p><b>Aporte:</b> escribe aquí la idea principal.</p><p><b>Importancia:</b> explica su relación con Biología.</p></div>
+  <div class="card"><span class="tag">ARTÍCULO 02</span><h3>Título del artículo</h3><p><b>Aporte:</b> escribe aquí la idea principal.</p><p><b>Importancia:</b> explica por qué lo consideras relevante.</p></div>
+  <div class="card"><span class="tag">RECURSO</span><h3>Material adicional</h3><p>Agrega videos, libros, páginas web u otros recursos.</p></div>
+ </div>
+</section>
+
+<section class="container" id="reflexion">
+ <div class="heading"><span>05 · Reflexión</span><h2>Reflexión crítica</h2></div>
+ <div class="reflection">
+  <h2>🧠 ¿Qué aprendí?</h2>
+  <p>Responde: ¿Qué aprendí? ¿Qué me resultó difícil? ¿Qué actividad me ayudó más? ¿Cómo puedo aplicar lo aprendido en Ingeniería Agrónoma?</p>
+  <textarea placeholder="Escribe aquí tu reflexión crítica..."></textarea>
+ </div>
+</section>
+
+<section class="container" id="proceso">
+ <div class="heading"><span>06 · Mi proceso</span><h2>Ruta de aprendizaje</h2></div>
+ <div class="timeline">
+  <div class="step"><span class="num">01</span><h3>Inicio</h3><p>Presentación y objetivos del curso.</p></div>
+  <div class="step"><span class="num">02</span><h3>Aprendizaje</h3><p>Desarrollo de contenidos y actividades.</p></div>
+  <div class="step"><span class="num">03</span><h3>Evidencias</h3><p>Organización de mis trabajos.</p></div>
+  <div class="step"><span class="num">04</span><h3>Reflexión</h3><p>Análisis de lo aprendido.</p></div>
+ </div>
+</section>
+
+<footer>
+ <strong>PORTAFOLIO DE BIOLOGÍA · INGENIERÍA AGRÓNOMA</strong>
+ <p>Universidad Nacional Toribio Rodríguez de Mendoza de Amazonas</p>
+ <p><a href="https://www.untrm.edu.pe/" target="_blank">Sitio oficial de la UNTRM ↗</a></p>
+</footer>
+</div>
+
+<script>
+function toggle(id,btn){
+ const p=document.getElementById(id);
+ p.classList.toggle('open');
+ btn.querySelector('.plus').textContent=p.classList.contains('open')?'−':'+';
+}
+</script>
+</body>
+</html>
